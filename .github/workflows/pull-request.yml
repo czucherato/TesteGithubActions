@@ -28,9 +28,7 @@ jobs:
         pr_reviewer: czucherato
         pr_assignee: czucherato
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        pr_label: |
-            report
-            automated pr
+        pr_label: "automated pr"
         team-reviewers: |
             owners
             maintainers
