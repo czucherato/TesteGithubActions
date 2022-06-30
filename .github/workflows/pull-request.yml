@@ -21,7 +21,6 @@ jobs:
         destination_branch: "main"
         author: ${{ github.actor }} <${{ github.actor }}@users.noreply.github.com>
         pr_title: "Pulling ${{ github.ref }} into master"
-        pr_template: ".github/PULL_REQUEST_TEMPLATE.md" 
         body: |
             **Automated pull request**
             - Updated with *today's* date
