@@ -18,8 +18,8 @@ jobs:
       uses: repo-sync/pull-request@v2
       with:
         source_branch: ""
-        destination_branch: "main"
-        pr_title: "Pulling ${{ github.ref }} into master"
+        destination_branch: "develop"
+        pr_title: "Pulling ${{ github.ref }} into develop"
         pr_body: |
             **Automated pull request**
             - Updated with *today's* date
@@ -27,4 +27,4 @@ jobs:
         pr_reviewer: czucherato
         pr_assignee: czucherato
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        pr_label: "automated pr"
+        pr_label: "automated pr into develop"
