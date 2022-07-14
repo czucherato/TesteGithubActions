@@ -13,6 +13,7 @@ jobs:
       id: release_tag_version
       uses: mathieudutour/github-tag-action@v6.0
       with:
+          default_bump: patch
           github_token: ${{ secrets.GITHUB_TOKEN }}
     - name: Create a GitHub release
       uses: ncipollo/release-action@v1
