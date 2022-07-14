@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Delete Branch Action
+name: Delete Branch Feature Action
 
 # Controls when the workflow will run
 on:
@@ -17,7 +17,13 @@ jobs:
   delete-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: delete branch
-        uses: SvanBoxel/delete-merged-branch@main
+      - name: delete branch feature
+        uses: dawidd6/action-delete-branch@v3
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          github_token: ${{github.token}}
+          owner: czucherato
+          repository: specific-repository
+          branches: feature
+          suffix: /*
