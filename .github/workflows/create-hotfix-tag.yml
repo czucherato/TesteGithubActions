@@ -1,0 +1,23 @@
+name: Create Hotfix Tag After Pull-request Into Main
+on:
+  pull_request:
+    types: [closed]
+    branches: [ "main" ]
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Create Hotfix Tag After Pull-request Into Main
+      id: hotfix_tag_version
+      uses: mathieudutour/github-tag-action@v6.0
+      with:
+          default_bump: patch
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Create a Hotfix Tag
+      uses: ncipollo/release-action@v1
+      with:
+          tag: ${{ steps.hotfix_tag_version.outputs.new_tag }}
+          name: Release ${{ steps.hotfix_tag_version.outputs.new_tag }}
+          body: ${{ steps.hotfix_tag_version.outputs.changelog }}
