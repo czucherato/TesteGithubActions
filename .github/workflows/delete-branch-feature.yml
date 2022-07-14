@@ -17,11 +17,9 @@ jobs:
   delete-branch:
     runs-on: ubuntu-latest
     steps:
-      - name: delete branch feature
-        uses: dawidd6/action-delete-branch@v3
+      - name: delete branch
+        uses: SvanBoxel/delete-merged-branch@main
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: czucherato
-          branches: feature
+          exclude: feature/*
