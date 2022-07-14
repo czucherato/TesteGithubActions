@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Action Delete Branch Feature 
+name: Action Delete Branch After Pull-request
 
 # Controls when the workflow will run
 on:
