@@ -1,3 +1,3 @@
 ### Teste Github Actions
 
-Teste Workflow 1
+Teste Workflow 2
