@@ -1,3 +1,3 @@
 ### Teste Github Actions
 
-Teste Workflow Tag 6
+Teste Workflow Tag 7
