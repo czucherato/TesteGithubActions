@@ -1,7 +1,7 @@
-name: Action Pull-request From Feature Into Main
+name: Action Pull-request Into Main
 on:
   push:
-    branches: [ "feature/*" ]
+    branches: [ "feature/*", "hotfix/" ]
 jobs:
   pull-request:
     runs-on: ubuntu-latest
